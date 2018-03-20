@@ -1,0 +1,64 @@
+
+<div class="col-sm-12 navigationScroll">
+	<div class="progress">
+		<div class="progress-bar" role="progressbar"
+			aria-valuenow="{{rnqCtrl.progressValue}}" aria-valuemin="0"
+			aria-valuemax="100" style="width: {{rnqCtrl.progressValue}}%">
+			<span class="sr-only">70% Complete</span>
+		</div>
+	</div>
+</div>
+<div>
+	<table dt-column-defs="dtColumnDefs" datatable="ng"
+		dt-options="dtOptions" class="table table-hover table-bordered">
+		<thead>
+			<tr class="info">
+				<th>Submission No</th>
+				<th>Agent Code</th>
+				<th>Agent Name</th>
+
+				<th>Parent Agent Code</th>
+				<th>Parent Agent Name</th>
+
+				<th>Business Unit Name</th>
+				<th>Operating Unit Name</th>
+				<th>Status</th>
+				<th>Action</th>
+			</tr>
+		</thead>
+
+		<tbody>
+
+			<tr ng-repeat="data in resultReviewed">
+				<td>{{data.submissionNo}}</td>
+				<td>{{data.agentCode}}</td>
+				<td>{{data.agentName}}</td>
+				<td>{{data.parentAgentCode}}</td>
+				<td>{{data.parentAgentName}}</td>
+				<td>{{data.businessUnitName}}</td>
+				<td>{{data.operatingUnitName}}</td>
+				<td>{{data.status}}</td>
+				<td class="actionAlign"><i class="fa fa-pencil"
+					aria-hidden="true" ng-click="rnqCtrl.showDetailsById(data)"></i></td>
+
+
+			</tr>
+			<tr ng-repeat="data in resultRejected">
+				<td>{{data.submissionNo}}</td>
+				<td>{{data.agentCode}}</td>
+				<td>{{data.agentName}}</td>
+				<td>{{data.parentAgentCode}}</td>
+				<td>{{data.parentAgentName}}</td>
+				<td>{{data.businessUnitName}}</td>
+				<td>{{data.operatingUnitName}}</td>
+				<td>{{data.status}}</td>
+				<td class="actionAlign"><i class="fa fa-pencil"
+					aria-hidden="true" ng-click="rnqCtrl.showDetailsById(data)"></i></td>
+
+
+			</tr>
+
+
+		</tbody>
+	</table>
+</div>

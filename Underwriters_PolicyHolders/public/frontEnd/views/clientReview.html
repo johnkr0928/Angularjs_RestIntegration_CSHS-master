@@ -1,0 +1,44 @@
+
+<div class="col-sm-12 navigationScroll">
+	<div class="progress">
+		<div class="progress-bar" role="progressbar"
+			aria-valuenow="{{crCtrl.progressValue}}" aria-valuemin="0"
+			aria-valuemax="100" style="width: {{crCtrl.progressValue}}%">
+			<span class="sr-only">70% Complete</span>
+		</div>
+	</div>
+</div>
+<div>
+	<table dt-column-defs="dtColumnDefs" datatable="ng" dt-options="dtOptions" class="table table-hover table-bordered">
+		<thead>
+			<tr class="info">
+				<th>Submission No</th>
+				<th>Agent Code</th>
+				<th>Agent Name</th>
+
+				<th>Parent Agent Code</th>
+				<th>Parent Agent Name</th>
+
+				<th>Business Unit Name</th>
+				<th>Operating Unit Name</th>
+				<th>Action</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="data in result">
+				<td>{{data.submissionNo}}</td>
+				<td>{{data.agentCode}}</td>
+				<td>{{data.agentName}}</td>
+				<td>{{data.parentAgentCode}}</td>
+				<td>{{data.parentAgentName}}</td>
+				<td>{{data.businessUnitName}}</td>
+				<td>{{data.operatingUnitName}}</td>
+				<td class="actionAlign"><i class="fa fa-eye" aria-hidden="true" ng-click="crCtrl.showDetailsById(data)"></i></td>
+
+
+			</tr>
+
+			
+		</tbody>
+	</table>
+</div>

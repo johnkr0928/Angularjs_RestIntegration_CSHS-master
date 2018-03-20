@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Underwriters and Policy Holder</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="frontEnd/css/bootstrap.min.css">
+	<link rel="stylesheet"
+	href="https://cdn.datatables.net/1.10.7/css/jquery.dataTables.min.css">
+<link rel="stylesheet" href="frontEnd/css/styles.css">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script
+	src="https://cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/angular-datatables/0.5.6/angular-datatables.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+ 
+
+
+
+</head>
+<body>
+	<div class="container" ng-app="insuranceApp">
+		<div class="row mainPage"  ng-controller="mainController as mCtrl">
+			<div class="col-sm-12">
+				<div class="col-sm-4 crousal">
+					<a href="#" ng-click="mCtrl.home()"> <img class="imgMain"
+						src="frontEnd/img/insurance_logo.PNG" />
+					</a>
+				</div>
+				<div class="col-sm-4"></div>
+				<div class="col-sm-4">
+					<div class="contact">
+						<p class="contact-heading">Contact our UK-based experts</p>
+						<p class="contact-number">
+							<i class="fa fa-phone" aria-hidden="true"></i><span>1800 - 111 - 111</span>
+						</p>
+						<p class="contact-content">Mon-Fri 8am-7pm | Sat 9am-2pm</p>
+						<p class="contact-content">Calls are free from landlines and
+							some mobile contracts</p>
+					</div>
+				</div>
+				
+			</div>
+			<div>
+				<div class="loginButtons" ng-if="mCtrl.isFormOpen">
+					<span class="clientButton"> <a href="#enterDetails"
+						ng-click="mCtrl.showClient()" class="btn btn-primary">Client</a>
+					</span> <span> <a href="#rateNQoute"
+						ng-click="mCtrl.showUnderwriter()" class="btn btn-primary">Underwriter</a>
+					</span>
+				</div>
+				<div class="col-sm-12 progress-content" ng-if="mCtrl.isUnderWriter">
+					<ul class="nav nav-pills">
+						<li class="col-sm-6 active"><a data-toggle="pill"
+							href="#rateNQoute">1. Rate, Review and Quote</a></li>
+						<li class="col-sm-6"><a data-toggle="pill"
+							href="#binding">2. Binding</a></li>
+
+					</ul>
+				</div>
+				
+				<div class="col-sm-12 progress-content" ng-if="mCtrl.isClient">
+					<ul class="col-sm-12 col-md-12 nav nav-pills">
+						<li class="col-sm-4 active"><a data-toggle="pill"
+							href="#enterDetails">1. Enter your Details</a></li>
+						<li class="col-sm-4"><a data-toggle="pill"
+							href="#clientReview">2. Review Quote & Accept</a></li>
+
+						<li class="col-sm-4"><a data-toggle="pill"
+							href="#binding">3. View Your Policy</a></li>
+
+					</ul>
+				</div>
+				<div ng-if="!mCtrl.isFormOpen">
+					<div ng-view></div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+	<script src="frontEnd/script/app.js"></script>
+	<script src="frontEnd/script/Services/angular-modal-service.js"></script>
+	<script src="frontEnd/script/Services/insuranceService.js"></script>
+	<script src="frontEnd/script/Controllers/mainController.js"></script>
+	<script src="frontEnd/script/Controllers/enterDetailsController.js"></script>
+	<script src="frontEnd/script/Controllers/rateNQuoteController.js"></script>
+	<script src="frontEnd/script/Controllers/rateNQuoteControllerModal.js"></script>
+	<script src="frontEnd/script/Controllers/clientReviewController.js"></script>
+	<script src="frontEnd/script/Controllers/reviewQuotationControllerModal.js"></script>
+	<script src="frontEnd/script/Controllers/bindingController.js"></script>
+	<script src="frontEnd/script/Controllers/bindedControllerModal.js"></script>
+	<script src="frontEnd/script/Directive/numberOnly.js"></script>
+	<script src="frontEnd/script/Directive/starRating.js"></script>
+	<script src="frontEnd/script/Directive/starRatingDisabled.js"></script>
+	<!--
+	<script src="frontEnd/script/Controllers/newAccountController.js"></script>
+	<script src="frontEnd/script/Controllers/balanceController.js"></script>
+	<script src="frontEnd/script/Controllers/depositController.js"></script>
+	<script src="frontEnd/script/Controllers/withdrawController.js"></script>
+	<script src="frontEnd/script/Controllers/transferController.js"></script>
+	<script src="frontEnd/script/Controllers/closeController.js"></script>
+	<script src="frontEnd/script/Directive/numberOnly.js"></script>-->
+</body>
+<footer class="container-fluid col-sm-12">
+	<p>Copyright 2016. All Rights Reserved.</p>
+</footer>
+</html>
+

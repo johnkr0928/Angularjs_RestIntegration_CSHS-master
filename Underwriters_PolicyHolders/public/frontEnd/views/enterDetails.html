@@ -1,0 +1,166 @@
+<div class="col-sm-12 navigationScroll">
+	<div class="progress">
+		<div class="progress-bar" role="progressbar"
+			aria-valuenow="{{userCtrl.progressValue}}" aria-valuemin="0"
+			aria-valuemax="100" style="width: {{userCtrl.progressValue}}%">
+			<span class="sr-only">70% Complete</span>
+		</div>
+	</div>
+</div>
+<div class="container">
+	<div class="col-sm-2"></div>
+	<div class="col-sm-9">
+		<form name="detailsForm"
+			ng-submit="userCtrl.getDetails(detailsForm.$valid)" novalidate>
+
+			<div class="col-sm-12 col-md-12 fieldAlign">
+				<label class="col-sm-3 col-md-3 headingsAlign"> Agent Name <span class="errorTag">*</span></label>
+
+				<div class="col-sm-5 col-md-5">
+					<input name="agent_name" class="form-control"
+						ng-model="userCtrl.user.agentName" maxlength="10" placeholder="Enter Agent Name" type="text"
+						required />				 
+				</div>
+				<span class="fa fa-star"></span>
+				<div class="col-sm-4">
+					<p class="errorTag errorTagField" ng-show="detailsForm.agent_name.$invalid && !detailsForm.agent_name.$pristine">Enter agent name</p>
+				</div>
+			</div>
+
+			<div class="col-sm-12 fieldAlign">
+
+				<label class="col-sm-3 headingsAlign"> Agent Code <span class="errorTag">*</span></label>
+
+				<div class="col-sm-5">
+					<input name="agent_code" class="form-control"
+						ng-model="userCtrl.user.agentCode" maxlength="10" type="text" placeholder="Enter Agent Code"
+						required />
+				</div>
+				<div class="col-sm-4">
+					<p class="errorTag errorTagFields" ng-show="detailsForm.agent_code.$invalid && !detailsForm.agent_code.$pristine">Enter agent code</p>
+				</div>
+
+			</div>
+
+			<div class="col-sm-12 fieldAlign">
+
+				<label class="col-sm-3 headingsAlign"> Parent Agent Name <span class="errorTag">*</span></label>
+
+				<div class="col-sm-5">
+					<input name="parent_agent_name" class="form-control"
+						ng-model="userCtrl.user.parentAgentName" maxlength="10" placeholder="Enter Parent Agent Name"
+						type="text" required />
+				</div>
+				<div class="col-sm-4">
+					<p class="errorTag errorTagFields" ng-show="detailsForm.parent_agent_name.$invalid && !detailsForm.parent_agent_name.$pristine">Enter parent agent name</p>
+				</div>
+
+			</div>
+
+			<div class="col-sm-12 fieldAlign">
+
+				<label class="col-sm-3 headingsAlign"> Parent Agent Code <span class="errorTag">*</span></label>
+
+				<div class="col-sm-5">
+					<input name="parent_agent_code" class="form-control"
+						ng-model="userCtrl.user.parentAgentCode" maxlength="10" placeholder="Enter Parent Agent Code"
+						type="text" required />
+				</div>
+				<div class="col-sm-4">
+					<p class="errorTag errorTagFields" ng-show="detailsForm.parent_agent_code.$invalid && !detailsForm.parent_agent_code.$pristine">Enter parent agent code</p>
+				</div>
+
+			</div>
+
+			<div class="col-sm-12 fieldAlign">
+
+				<label class="col-sm-3 headingsAlign"> Business Unit Name </label>
+
+				<div class="col-sm-5">
+					<input name="business_unit_name" class="form-control"
+						ng-model="userCtrl.user.businessUnitName" maxlength="10" placeholder="Enter Business Unit Name"
+						type="text"  />
+				</div>
+				<div class="col-sm-4">
+					<!-- <p class="errorTag"
+						ng-show="detailsForm.business_unit_name.$invalid">Enter
+						Business Unit Name</p> -->
+				</div>
+
+			</div>
+
+			<div class="col-sm-12 fieldAlign">
+
+				<label class="col-sm-3 headingsAlign"> Operating Unit Name </label>
+
+				<div class="col-sm-5">
+					<input name="operating_unit_name" class="form-control"
+						ng-model="userCtrl.user.operatingUnitName" maxlength="10" placeholder="Enter Operating Unit Name"
+						type="text"  />
+				</div>
+				<div class="col-sm-4">
+					<!-- <p class="errorTag" ng-show="detailsForm.business_unit_name.$invalid">Enter agent name</p> -->
+				</div>
+
+			</div>
+
+			<div class="col-sm-12 fieldAlign">
+
+				<label class="col-sm-3 headingsAlign"> Previous Policy Number </label>
+
+				<div class="col-sm-5">
+					<input name="previous_policy_number" class="form-control"
+						ng-model="userCtrl.user.previousPolicyNumber" maxlength="10" placeholder ="Enter Previous Policy Number "
+						type="text"  />
+				</div>
+				<div class="col-sm-4">
+					<!-- <p class="errorTag" ng-show="detailsForm.business_unit_name.$invalid">Enter agent name</p> -->
+				</div>
+
+			</div>
+
+			<div class="col-sm-12 fieldAlign">
+
+				<label class="col-sm-3 headingsAlign"> Insured Name <span class="errorTag">*</span></label>
+
+				<div class="col-sm-5">
+					<input name="insured_name" class="form-control"
+						ng-model="userCtrl.user.insuredName" maxlength="10" type="text" placeholder="Enter Insured Name"
+						required />
+				</div>
+				<div class="col-sm-4">
+					<p class="errorTag errorTagFields" ng-show="detailsForm.insured_name.$invalid && !detailsForm.insured_name.$pristine">Enter Insured name</p>
+				</div>
+
+			</div>
+
+			<div class="col-sm-12 fieldAlign">
+
+				<label class="col-sm-3 headingsAlign"> Agent Contact <span class="errorTag">*</span></label>
+
+				<div class="col-sm-5">
+					<input name="agent_contact" class="form-control"
+						ng-model="userCtrl.user.agentContact" maxlength="10" type="text" placeholder="Enter Agent Contact" number-only
+						required />
+				</div>
+				<div class="col-sm-4">
+					<p class="errorTag errorTagFields" ng-show="detailsForm.agent_contact.$invalid && !detailsForm.agent_contact.$pristine">Enter agent contact</p>
+				</div>
+
+			</div>
+
+
+
+
+			<div class="col-sm-12 bottomButtonsAlign">
+			 <p class="successTag">{{result}}</p>
+					
+				<span class=""> <input type="button" class="btn btn-default"
+					value="Cancel" ng-click="userCtrl.reset()" />
+				</span> <span> <input type="submit" class="btn btn-primary"
+					value="Submit" />
+				</span>
+			</div>
+		</form>
+	</div>
+</div>

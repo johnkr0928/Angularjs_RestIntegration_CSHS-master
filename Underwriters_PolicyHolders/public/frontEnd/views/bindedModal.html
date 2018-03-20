@@ -1,0 +1,109 @@
+<!--<script src="frontEnd/lib/rating.js"></script>-->
+<div class="modal fade">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" ng-click="cancel()"
+					data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 class="modal-title">{{title}}</h4>
+			</div>
+
+			<div class="modal-body">
+				<label class="modalSubHeading"> Review Submission </label> <span>
+					<label class="submissionStyle">{{showData.submissionNo}}</label>
+				</span>
+
+				<form name="reviewQuotationForm"
+					ng-submit="close(reviewQuotationForm.$valid)"
+					class="form-horizontal " role="form" novalidate>
+					<div class="row modalAlign">
+						<div class="leftPanel col-md-6">
+							<div class="form-group">
+								<label class="headingsLabel"> Agent Name : </label> <span>
+									<label class="labelData">{{showData.agentName}}</label>
+								</span>
+							</div>
+
+							<div class="form-group ">
+								<label class="headingsLabel"> Parent Agent Name : </label> <span>
+									<label class="labelData">{{showData.parentAgentName}}</label>
+								</span>
+							</div>
+
+							<div class="form-group">
+								<label class="headingsLabel"> Business Unit Name : </label> <span>
+									<label class="labelData">{{showData.businessUnitName}}</label>
+								</span>
+							</div>
+
+							<div class="form-group ">
+								<label class="headingsLabel"> Policy Number : </label> <span>
+									<label class="labelData">{{showData.polNum}}</label>
+								</span>
+							</div>
+
+							<div class="form-group">
+								<label class="headingsLabel"> Agent Contact : </label> <span>
+									<label class="labelData">{{showData.agentContact}}</label>
+								</span>
+							</div>
+
+							<div class="form-group">
+								<label class="headingsLabel"> Accepted Data : <br>
+									<i class="subTitle">(mm-dd-yyyy)</i>
+									</label> <span>
+									<label class="labelData">{{accepetedDate}}</label>
+								</span>
+							</div>
+
+						</div>
+
+						<div class="rightPanel col-md-6">
+							<div class="form-group ">
+								<label class="headingsLabel"> Agent Code : </label> <span>
+									<label class="labelData">{{showData.agentCode}}</label>
+								</span>
+							</div>
+
+							<div class="form-group ">
+								<label class="headingsLabel">Parent Agent Code : </label> <span>
+									<label class="labelData">{{showData.parentAgentCode}}</label>
+								</span>
+							</div>
+
+							<div class="form-group ">
+								<label class="headingsLabel"> Operating Unit Name : </label> <span>
+									<label class="labelData">{{showData.operatingUnitName}}</label>
+								</span>
+							</div>
+
+							<div class="form-group ">
+								<label class="headingsLabel"> Insured Name : </label> <span>
+									<label class="labelData">{{showData.insuredName}}</label>
+								</span>
+							</div>
+
+							<div class="form-group ">
+								<label class="headingsLabel"> Status : </label> <span> <label
+									class="labelData">{{showData.status}}</label>
+								</span>
+							</div>
+
+						</div>
+
+					</div>
+
+
+				</form>
+			</div>
+
+			<div class="modal-footer">
+				<div class="col-md-12">
+					<div class="col-md-12">
+						<button type="button" ng-click="cancel()" class="btn btn-primary">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

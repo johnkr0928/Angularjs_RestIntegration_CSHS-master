@@ -1,0 +1,5 @@
+API to view request by ID 				GET METHOD 	= 		http://localhost:8080/Client_StackHolder_System/cshs/viewClientRequestBySubmissionId/1
+API to view request by Status			GET METHOD 	= 		http://localhost:8080/Client_StackHolder_System/cshs/viewAllClientRequestByStatus/{STATUS}
+API to view all request					GET METHOD 	= 		http://localhost:8080/Client_StackHolder_System/cshs/viewAllClientRequest
+API to submit a new client request		POST METHOD	= 		http://localhost:8080/Client_StackHolder_System/cshs/submitClientRequest
+API to update by ID 					PUT METHOD 	= 		http://localhost:8080/Client_StackHolder_System/cshs/updateSubmittedClientRequest/{id}
